@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 // import { NavHashLink as NavLink } from 'react-router-hash-link';
 // import Fade from 'react-reveal/Fade';
-import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
+import { IoMenuSharp } from 'react-icons/io5';
 // import { HiDocumentText } from 'react-icons/hi';
 // import { BsFillGearFill } from 'react-icons/bs';
 // import { MdPhone } from 'react-icons/md';
@@ -24,11 +24,11 @@ function Navbar() {
         setHandleDrawer();
     };
 
-    const handleDrawerClose = () => {
-        setOpen('');
-        setHandleDrawer();
-    };
-
+    // const handleDrawerClose = () => {
+    //     setOpen('');
+    //     setHandleDrawer();
+    // };
+console.log(open);
     const useStyles = makeStyles((t) => ({
         navMenu: {
             fontSize: '2.5rem',
@@ -125,18 +125,12 @@ function Navbar() {
 
     const classes = useStyles();
 
-    const shortname = (name) => {
-        if (name.length > 12) {
-            return name.split(' ')[0];
-        } else {
-            return name;
-        }
-    };
+   
 
     return (
         <div className='navbar'>
             <div  className='navbar--container'>
-                <img className="logoHeader" src={headerData.logo} style={{ color: theme.secondary }}>
+                <img className="logoHeader" src={headerData.logo} alt="logo" style={{ color: theme.secondary }}>
                    
                 </img>
 

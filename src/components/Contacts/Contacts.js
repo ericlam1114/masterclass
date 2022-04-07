@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 
 
-import axios from 'axios';
-import isEmail from 'validator/lib/isEmail';
+// import axios from 'axios';
+// import isEmail from 'validator/lib/isEmail';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   
@@ -11,7 +11,7 @@ import {
 
     FaMediumM,
 } from 'react-icons/fa';
-import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
+
 import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
@@ -22,24 +22,31 @@ import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 
 function Contacts() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [message, setMessage] = useState('');
 
-    const [success, setSuccess] = useState(false);
-    const [errMsg, setErrMsg] = useState('');
+    // const [success, setSuccess] = useState(false);
+    // const [errMsg, setErrMsg] = useState('');
 
     const { theme } = useContext(ThemeContext);
 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
+    // const handleClose = (event, reason) => {
+    //     if (reason === 'clickaway') {
+    //         return;
+    //         console.log(open);
+    //         console.log(success);
+    //         console.log(errMsg);
+    //     }
 
-        setOpen(false);
-    };
+    //     setOpen(false);
+    // };
+
+    // console.log(open);
+    //         console.log(success);
+    //         console.log(errMsg);
 
     const useStyles = makeStyles((t) => ({
         input: {
@@ -123,36 +130,36 @@ function Contacts() {
 
     const classes = useStyles();
 
-    const handleContactForm = (e) => {
-        e.preventDefault();
+    // const handleContactForm = (e) => {
+    //     e.preventDefault();
 
-        if (name && email && message) {
-            if (isEmail(email)) {
-                const responseData = {
-                    name: name,
-                    email: email,
-                    message: message,
-                };
+    //     if (name && email && message) {
+    //         if (isEmail(email)) {
+    //             const responseData = {
+    //                 name: name,
+    //                 email: email,
+    //                 message: message,
+    //             };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                    console.log('success');
-                    setSuccess(true);
-                    setErrMsg('');
+    //             axios.post(contactsData.sheetAPI, responseData).then((res) => {
+    //                 console.log('success');
+    //                 setSuccess(true);
+    //                 setErrMsg('');
 
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setOpen(false);
-                });
-            } else {
-                setErrMsg('Invalid email');
-                setOpen(true);
-            }
-        } else {
-            setErrMsg('Enter all the fields');
-            setOpen(true);
-        }
-    };
+    //                 setName('');
+    //                 setEmail('');
+    //                 setMessage('');
+    //                 setOpen(false);
+    //             });
+    //         } else {
+    //             setErrMsg('Invalid email');
+    //             setOpen(true);
+    //         }
+    //     } else {
+    //         setErrMsg('Enter all the fields');
+    //         setOpen(true);
+    //     }
+    // };
 
     return (
         <div
@@ -276,7 +283,7 @@ function Contacts() {
 
                     <div className='contacts-details'>
                         <a
-                            // href={`mailto:${contactsData.email}`}
+                            href={`mailto:${contactsData.email}`}
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
@@ -287,7 +294,7 @@ function Contacts() {
                             </p>
                         </a>
                         <a
-                            // href={`tel:${contactsData.phone}`}
+                            href={`tel:${contactsData.phone}`}
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
