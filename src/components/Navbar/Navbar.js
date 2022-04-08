@@ -6,7 +6,7 @@ import React, { useContext, useState } from 'react';
 // import { BsFillGearFill } from 'react-icons/bs';
 // import { MdPhone } from 'react-icons/md';
 // import { FaUser, FaFolderOpen } from 'react-icons/fa';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 // import Drawer from '@material-ui/core/Drawer';
 // import CloseIcon from '@material-ui/icons/Close';
 
