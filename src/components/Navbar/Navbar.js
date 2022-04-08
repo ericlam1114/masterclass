@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 // import { NavHashLink as NavLink } from 'react-router-hash-link';
 // import Fade from 'react-reveal/Fade';
-import { IoMenuSharp } from 'react-icons/io5';
+// import { IoMenuSharp } from 'react-icons/io5';
 // import { HiDocumentText } from 'react-icons/hi';
 // import { BsFillGearFill } from 'react-icons/bs';
 // import { MdPhone } from 'react-icons/md';
@@ -19,36 +19,37 @@ function Navbar() {
 
     const [open, setOpen] = useState(false);
 
-    const handleDrawerOpen = () => {
-        setOpen('');
-        setHandleDrawer();
-    };
-
+    // const handleDrawerOpen = () => {
+    //     setOpen('');
+    //     setHandleDrawer();
+    // };
+console.log(setHandleDrawer);
+console.log(setOpen);
     // const handleDrawerClose = () => {
     //     setOpen('');
     //     setHandleDrawer();
     // };
 console.log(open);
-    const useStyles = makeStyles((t) => ({
-        navMenu: {
-            fontSize: '2.5rem',
-            color: theme.secondary,
-            // cursor: 'pointer',
-            transform: 'translateY(-10px)',
-            transition: 'color 0.3s',
-            position: "fixed",
-            top:"30px",
-            right: "30px",
-            '&:hover': {
-                // color: theme.primary,
-            },
-            [t.breakpoints.down('sm')]: {
-                fontSize: '2.5rem',
-            },
-            [t.breakpoints.down('xs')]: {
-                fontSize: '2rem',
-            },
-        },
+    // const useStyles = makeStyles((t) => ({
+    //     navMenu: {
+    //         fontSize: '2.5rem',
+    //         color: theme.secondary,
+    //         // cursor: 'pointer',
+    //         transform: 'translateY(-10px)',
+    //         transition: 'color 0.3s',
+    //         position: "fixed",
+    //         top:"30px",
+    //         right: "30px",
+    //         '&:hover': {
+    //             // color: theme.primary,
+    //         },
+    //         [t.breakpoints.down('sm')]: {
+    //             fontSize: '2.5rem',
+    //         },
+    //         [t.breakpoints.down('xs')]: {
+    //             fontSize: '2rem',
+    //         },
+    //     },
         // MuiDrawer: {
         //     padding: '0em 1.8em',
         //     width: '14em',
@@ -121,9 +122,9 @@ console.log(open);
         //         fontSize: '1.385rem',
         //     },
         // },
-    }));
+    // }));
 
-    const classes = useStyles();
+    // const classes = useStyles();
 
    
 
@@ -134,12 +135,12 @@ console.log(open);
                    
                 </img>
 
-                <IoMenuSharp
+                {/* <IoMenuSharp
                     className={classes.navMenu}
                     onClick={handleDrawerOpen}
                     aria-label='Menu'
                     id='navicon'
-                />
+                /> */}
             </div>
             {/* <Drawer
                 variant='temporary'
